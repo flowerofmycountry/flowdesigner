@@ -2,7 +2,9 @@
 流程图设计器
 
 在根目录下执行下面两行命令启动server：
+
 1：npm install http-server -g
+
 2：http-server
 
 浏览器输入http://127.0.0.1:8080即可访问
