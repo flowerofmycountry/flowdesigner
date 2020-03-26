@@ -1,4 +1,4 @@
 # flowdesigner
 flow designer js h5 canvas
 
-<video src="视频链接" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video>
+<video src="./video/flowdesigner.mp4" controls="controls" width="500" height="300">鎮ㄧ殑娴忚鍣ㄤ笉鏀寔鎾斁璇ヨ棰戯紒</video>
