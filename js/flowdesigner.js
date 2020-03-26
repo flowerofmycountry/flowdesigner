@@ -9,24 +9,25 @@ class FlowDesigner {
         this.palette = new Palette(paletteDiv);
         this.diagram = new Diagram(diagramDiv);
 
-        // corrcet this scope
+        // 修正this指向
         this.onMouseMove_diagram_newItem = this.onMouseMove_diagram_newItem.bind(this);
         this.onMouseMove_diagram_moveItem = this.onMouseMove_diagram_moveItem.bind(this);
         this.onMouseMove_diagram_drawLine = this.onMouseMove_diagram_drawLine.bind(this);
-
         this.onCallContextMenu = this.onCallContextMenu.bind(this);
         this.onClickContextMenuButton = this.onClickContextMenuButton.bind(this);
 
+        // 工具栏事件注册
         this.palette.canvas.addEventListener("mousedown", (e) => this.onMouseDown_palette(e), false);
         this.palette.canvas.addEventListener("mouseup", (e) => this.onMouseUp_palette(e), false);
+
+        // 绘图区域事件注册
         this.diagram.canvas.addEventListener("mousedown", (e) => this.onMouseDown_diagram(e), false);
         this.diagram.canvas.addEventListener("mouseup", (e) => this.onMouseUp_diagram(e), false);
         this.diagram.canvas.addEventListener("dblclick", (e) => this.onDblClick_diagram(e), false);
         this.diagram.canvas.addEventListener('contextmenu', this.onCallContextMenu, false);
 
+        // 键盘事件注册
         document.addEventListener("keydown", (e) => this.keyCheck(e), false);
-
-        
 
         this.drawFlag = null;
     }
